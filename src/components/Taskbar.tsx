@@ -1,14 +1,16 @@
 'use client';
 
-import { StartIcon, FolderIcon } from '@/app/icons';
-import Time from '@/components/Time';
+// import { StartIcon, FolderIcon } from '@/app/icons';
+import { FolderIcon } from '@/app/icons';
+
+// import Time from '@/components/Time';
 import TaskbarItem from '@/components/TaskbarItem';
 import { usePathname } from 'next/navigation';
 
 export default function Taskbar() {
   const pathname = usePathname();
   return (
-    <div className="fixed bottom-0 left-0 right-0 h-8 bg-[#c0c0c0] border-t-2 border-t-white flex items-center px-2">
+    <div className="fixed bottom-0 left-0 right-0 h-12 md:h-8 bg-[#c0c0c0] border-t-2 border-t-white flex items-center px-2">
       {/* <button className="bg-[#000080] text-white px-2 py-1 flex items-center">
         <StartIcon />
         <span className="ml-1">Menu</span>

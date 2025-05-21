@@ -30,7 +30,7 @@ export default function Window({ title, icon: Icon, children }: WindowProps) {
       </div>
 
       {/* Window Content */}
-      <div className="bg-[#f8f8f8] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white p-4">
+      <div className="bg-[#f8f8f8] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
         {children}
       </div>
     </div>

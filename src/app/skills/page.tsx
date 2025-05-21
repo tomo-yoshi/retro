@@ -3,7 +3,7 @@ import WindowTemplate from '@/components/WindowTemplate';
 
 export default function Skills() {
   return (
-    <WindowTemplate title="Skills" icon={FaCode} className="top-[12%] md:top-1/5">
+    <WindowTemplate title="Skills" icon={FaCode} className="top-[16%] md:top-[26%]">
       <div className="space-y-6 text-[#222266]">
         <section>
           <h2 className="text-xl font-bold mb-3">Technical Skills</h2>

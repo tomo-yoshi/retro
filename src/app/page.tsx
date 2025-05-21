@@ -4,9 +4,9 @@ import WindowTemplate from '@/components/WindowTemplate';
 
 export default function Home() {
   return (
-    <WindowTemplate title="Welcome to My Website" icon={FaFolder}>
-      <h1 className="text-2xl font-bold mb-4 text-[#222266]">Hi, I'm Tomohiro.</h1>
-      <p className="mb-4 text-[#222266]">I'm a <span className="font-bold">WEB DEVELOPER</span> passionate about creating amazing things.</p>
+    <WindowTemplate title="Welcome to My Website" icon={FaFolder} className="top-[16%] md:top-[26%]">
+      <h1 className="text-2xl font-bold mb-4 text-[#222266]">Hi, I&apos;m Tomohiro.</h1>
+      <p className="mb-4 text-[#222266]">I&apos;m a <span className="font-bold">WEB DEVELOPER</span> passionate about creating amazing things.</p>
       <div className="flex flex-col items-center mb-6">
         <div className="relative w-32 h-32 mt-4">
           <Image
