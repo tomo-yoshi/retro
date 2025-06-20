@@ -1,5 +1,16 @@
 import { FaUser } from 'react-icons/fa';
 import WindowTemplate from '@/components/WindowTemplate';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About - Tomo Yoshi Portfolio',
+  description: 'Learn more about Tomohiro, a passionate web developer based in Vancouver',
+  openGraph: {
+    title: 'About - Tomo Yoshi Portfolio',
+    description: 'Learn more about Tomohiro, a passionate web developer based in Vancouver',
+    type: 'website',
+  },
+};
 
 export default function About() {
   return (
