@@ -1,6 +1,7 @@
 import { IconType } from 'react-icons';
 import Link from 'next/link';
 import { cn } from '@/utils/cn';
+import { windows95Theme } from '@/styles/theme';
 
 interface TaskbarItemProps {
   icon: IconType;
@@ -13,25 +14,36 @@ export default function TaskbarItem({ icon: Icon, label, href, isActive }: Taskb
   const baseClasses = cn(
     'px-2 py-1 flex items-center transition-colors',
     'border-2',
+    windows95Theme.focus.ring,
     {
-      'bg-[#c0c0c0] border-t-[#808080] border-l-[#808080] border-r-white border-b-white cursor-not-allowed': isActive,
-      'bg-white border-t-[#808080] border-l-[#808080] border-r-white border-b-white hover:border-t-white hover:border-l-white hover:border-r-[#808080] hover:border-b-[#808080]': !isActive
+      [`bg-[#c0c0c0] ${windows95Theme.borders.sunken} cursor-not-allowed`]: isActive,
+      [`bg-white ${windows95Theme.borders.sunken} ${windows95Theme.hover.raised}`]: !isActive
     }
   );
 
   const content = (
     <div className={baseClasses}>
-      <Icon />
+      <Icon aria-hidden="true" />
       <span className="ml-1 text-[#222266]">{label}</span>
     </div>
   );
 
   if (isActive) {
-    return content;
+    return (
+      <div role="tab" aria-selected="true" aria-label={`${label} - current page`}>
+        {content}
+      </div>
+    );
   }
 
   return (
-    <Link href={href} className="no-underline">
+    <Link 
+      href={href} 
+      className="no-underline"
+      role="tab"
+      aria-selected="false"
+      aria-label={`Navigate to ${label}`}
+    >
       {content}
     </Link>
   );
